@@ -15,7 +15,8 @@ RUN apk --no-cache add bash curl grep unzip \
   && for file in *.zip; do unzip "$file"; done \
   && rm -rf *.zip
 
-FROM onec_base:latest as base
+#FROM onec_base:latest as base
+FROM demoncat/onec-base as base
 
 ARG ONEC_VERSION
 ARG nls_enabled=false
